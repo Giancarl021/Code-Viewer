@@ -7,7 +7,7 @@ const defaultPort = process.env.PORT || 3000;
 module.exports = async function([directory = process.cwd()]) {
     const port = this.helpers.valueOrDefault(this.helpers.getFlag('port', 'p'), defaultPort);
     const useTunnel = this.helpers.hasFlag('tunnel', 't');
-    const path = locate(directory);
+    const path = locate(directory, true);
 
     await new Promise(resolve => app(path).listen(port, resolve));
 
