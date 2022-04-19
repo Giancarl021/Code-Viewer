@@ -4,7 +4,7 @@ const serve = require('serve-handler');
 
 module.exports = function (path) {
     return async (request, response) => {
-        const relativePath = request.path.replace(/^\/_/, '');
+        const relativePath = decodeURIComponent (request.path.replace(/^\/_/, ''));
         const dest = locate(`${path}${relativePath}`);
 
         if (fs.lstatSync(dest).isDirectory()) {
