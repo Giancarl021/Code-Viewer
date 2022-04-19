@@ -1,0 +1,23 @@
+{
+    "serve": {
+        "args": [{
+            "name": "path/to/expose",
+            "optional": true,
+            "multiple": false
+        }],
+        "description": "Exposes a path on the given port, default path is current working directory",
+        "flags": {
+            "p": {
+                "aliases": ["port"],
+                "description": "The port to serve the application on, default PORT environment variable or 3000",
+                "values": [ "<port>" ],
+                "optional": true
+            },
+            "t": {
+                "aliases": ["tunnel"],
+                "description": "Create a tunnel to the internet with the localtunnel service",
+                "optional": true
+            }
+        }
+    }
+}

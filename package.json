@@ -10,7 +10,7 @@
     "start": "node ."
   },
   "bin": {
-    "code-viewer": "index"
+    "code-viewer": "index.js"
   },
   "dependencies": {
     "@giancarl021/cli-core": "^0.1.1",
