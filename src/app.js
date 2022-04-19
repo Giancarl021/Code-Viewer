@@ -9,7 +9,7 @@ module.exports = function (path) {
 
     app.use(cors());
     app.use(express.json());
-    app.use('/assets', express.static(locate('src/web/assets')));
+    app.use('/_/assets', express.static(locate('src/web/assets')));
     app.use(routes(path));
 
     return app;

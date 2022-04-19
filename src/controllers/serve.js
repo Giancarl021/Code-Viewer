@@ -4,25 +4,16 @@ const serve = require('serve-handler');
 
 module.exports = function (path) {
     return async (request, response) => {
-        const relativePath = decodeURIComponent (request.path.replace(/^\/_/, ''));
+        const relativePath = decodeURIComponent(request.path);
         const dest = locate(`${path}${relativePath}`);
 
-        if (fs.lstatSync(dest).isDirectory()) {
+        if (!fs.existsSync(dest) || fs.lstatSync(dest).isDirectory()) {
             await serve(request, response, {
                 public: path,
-                rewrites: [
-                    {
-                        source: '/_/:path+',
-                        destination: '/:path'
-                    },
-                    {
-                        source: '/_',
-                        destination: '/'
-                    }
-                ]
+                cleanUrls: false
             });
         } else {
-            return response.redirect(`/view?f=${encodeURIComponent(relativePath)}`);
+            return response.redirect(`/_/view?f=${encodeURIComponent(relativePath)}`);
         }
     };
 }

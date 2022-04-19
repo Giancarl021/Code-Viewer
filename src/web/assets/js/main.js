@@ -5,7 +5,7 @@ async function main() {
         location.href = '/';
     }
 
-    const response = await fetch(`/api/file${f}`);
+    const response = await fetch(`/_/api/file${f}`);
 
     if (response.status !== 200) {
         location.href = '/';
@@ -17,7 +17,7 @@ async function main() {
 
     const data = document.getElementById('data');
 
-    data.innerHTML = content;
+    data.textContent = content;
 
     hljs.highlightAll();
 }

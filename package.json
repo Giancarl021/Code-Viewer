@@ -6,6 +6,9 @@
   "repository": "https://github.com/Giancarl021/Code-Viewer.git",
   "author": "Giancarlo Fontela da Luz <gian.f.luz@hotmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "node ."
+  },
   "bin": {
     "code-viewer": "index"
   },
