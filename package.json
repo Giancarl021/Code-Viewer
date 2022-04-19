@@ -1,5 +1,5 @@
 {
-  "name": "code-viewer",
+  "name": "@giancarl021/code-viewer",
   "version": "0.1.0",
   "description": "View code from a local folder through a webserver",
   "main": "index.js",
@@ -20,5 +20,10 @@
     "express": "^4.17.3",
     "localtunnel": "^2.0.2",
     "serve-handler": "^6.1.3"
-  }
+  },
+  "keywords": [
+    "cli",
+    "server",
+    "viewer"
+  ]
 }
