@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    min-height: 100vh;
+    background-color: #1b1b1c;
+    color: #fff;
+}
+
+header {
+    width: 100%;
+}
+
+header button {
+    color: #fff;
+    border: none;
+    padding: none;
+    outline: none;
+    background-color: transparent;
+    padding: 8px;
+    cursor: pointer;
+    font-family: monospace;
+}
