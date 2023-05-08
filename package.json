@@ -1,6 +1,6 @@
 {
   "name": "@giancarl021/code-viewer",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "View code from a local folder through a webserver",
   "main": "index.js",
   "repository": "https://github.com/Giancarl021/Code-Viewer.git",
